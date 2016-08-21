@@ -1,0 +1,7 @@
+**/*env*
+__pycache__/
+.cache/
+*.pyc
+.coverage
+**/*gist*
+*gist*.*
