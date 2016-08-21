@@ -1,4 +1,4 @@
-from namedtupled import namedtupled
+import namedtupled
 import pytest
 import os
 
