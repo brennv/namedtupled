@@ -165,7 +165,7 @@ cat.binks  # {'says': 'meow'}
 
 PRs welcome, tests run with:
 
-```python
+```bash
 pip install pytest pytest-cov pytest-datafiles
 python -m pytest --cov=namedtupled/ tests
 ```
