@@ -5,19 +5,23 @@
 
 # Installation
 
-    pip install namedtupled
+```python
+pip install namedtupled
+```
 
 
 # Getting started
 
-    import namedtupled
+```python
+import namedtupled
 
-    data = {'binks': {'says': 'meow'}}
-    cat = namedtupled.map(data)
+data = {'binks': {'says': 'meow'}}
+cat = namedtupled.map(data)
 
-    cat  # NT(binks=NT(says='meow'))
+cat  # NT(binks=NT(says='meow'))
 
-    cat.binks.says  # 'meow'
+cat.binks.says  # 'meow'
+```
 
 
 ## Usage
@@ -26,10 +30,11 @@ Create namedtuples with methods: [map](#map), [json](#json), [yaml](#yaml), [zip
 
 Optionally name your namedtuples by passing a `name` argument to any of the methods -- the default name is simply 'NT'.
 
-    cat = namedtupled.map(data, name='Cat')
+```python
+cat = namedtupled.map(data, name='Cat')
 
-    cat  # Cat(binks=NT(says='meow'))
-
+cat  # Cat(binks=NT(says='meow'))
+```
 
 ### map()
 
@@ -37,19 +42,23 @@ Recursively convert mappings like nested dicts, or lists of dicts, into to named
 
 *args: mapping, name='NT'*
 
-  From dict:
+From dict:
 
-    data = {'binks': {'says': 'meow'}}
-    cat = namedtupled.map(data)
+```python
+data = {'binks': {'says': 'meow'}}
+cat = namedtupled.map(data)
 
-    cat.bink.says  # 'meow'
+cat.bink.says  # 'meow'
+```
 
-  From list:
+From list:
 
-    data = [{'id': 'binks', 'says': 'meow'}, {'id': 'cedric', 'says': 'prrr'}]
-    cats = namedtupled.map(data)
+```python
+data = [{'id': 'binks', 'says': 'meow'}, {'id': 'cedric', 'says': 'prrr'}]
+cats = namedtupled.map(data)
 
-    cats[1].says  # 'prrr'
+cats[1].says  # 'prrr'
+```
 
 ### json()
 
@@ -59,16 +68,20 @@ Map namedtuples from json data.
 
 Inline:
 
-    data = """{"binks": {"says": "meow"}}"""
-    cat = namedtupled.json(data)
+```python
+data = """{"binks": {"says": "meow"}}"""
+cat = namedtupled.json(data)
 
-    cat.binks.says  # 'meow'
+cat.binks.says  # 'meow'
+```
 
 Or specify path for a json file:
 
-    cat = namedtupled.json(path='cat.json')
+```python
+cat = namedtupled.json(path='cat.json')
 
-    cat.binks.says  # 'meow'
+cat.binks.says  # 'meow'
+```
 
 ### yaml()
 
@@ -78,19 +91,23 @@ Map namedtuples from yaml data.
 
 Inline:
 
-    data = """
-    binks:
-      says: meow
-    """
-    cat = namedtupled.yaml(data)
+```python
+data = """
+binks:
+  says: meow
+"""
+cat = namedtupled.yaml(data)
 
-    cat.binks.says  # 'meow'
+cat.binks.says  # 'meow'
+```
 
 Or specify path for a yaml file:
 
-    cat = namedtupled.yaml(path='cat.yaml')
+```python
+cat = namedtupled.yaml(path='cat.yaml')
 
-    cat.binks.says  # 'meow'
+cat.binks.says  # 'meow'
+```
 
 ### zip()
 
@@ -100,10 +117,12 @@ Map namedtuples given a pair of key, value lists.
 
 Example:
 
-    keys, values = ['id', 'says'], ['binks', 'prrr']
-    cat = namedtupled.zip(keys, values)
+```python
+keys, values = ['id', 'says'], ['binks', 'prrr']
+cat = namedtupled.zip(keys, values)
 
-    cat.says  # 'prrr'
+cat.says  # 'prrr'
+```
 
 ### env()
 
@@ -113,15 +132,19 @@ Returns a namedtuple from a list of environment variables. If not found in shell
 
 In shell:
 
-    export USERNAME="binks"
-    export APIKEY="c4tnip!"
+```bash
+export USERNAME="binks"
+export APIKEY="c4tnip!"
+```
 
-In python:
+Then in python:
 
-    vars = ['USERNAME', 'APIKEY']
-    cat = namedtupled.env(vars)
+```python
+variables = ['USERNAME', 'APIKEY']
+env = namedtupled.env(variables)
 
-    cat.username  # 'binks'
+env.username  # 'binks'
+```
 
 ### ignore()
 
@@ -131,15 +154,18 @@ Use ignore to prevent a mapping from being converted to a namedtuple.
 
 Example usage:
 
-    data = {'binks': namedtupled.ignore({'says': 'meow'})}
-    cat = namedtupled.map(data)
+```python
+data = {'binks': namedtupled.ignore({'says': 'meow'})}
+cat = namedtupled.map(data)
 
-    cat.binks  # {'says': 'meow'}
-
+cat.binks  # {'says': 'meow'}
+```
 
 # Development
 
 PRs welcome, tests run with:
 
-    pip install pytest pytest-cov pytest-datafiles
-    python -m pytest --cov=mapper/ tests
+```python
+pip install pytest pytest-cov pytest-datafiles
+python -m pytest --cov=namedtupled/ tests
+```
