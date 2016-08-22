@@ -6,14 +6,14 @@ a lightweight wrapper for recursively creating namedtuples from nested
 dicts, lists, json and yaml. Inspired by `hangtwenty`_.
 
 Installation
-============
+------------
 
 .. code:: bash
 
     pip install namedtupled
 
 Getting started
-===============
+---------------
 
 .. code:: python
 
@@ -175,7 +175,7 @@ Example usage:
     cat.binks  # {'says': 'meow'}
 
 Development
-===========
+-----------
 
 PRs welcome, tests run with:
 
@@ -183,7 +183,6 @@ PRs welcome, tests run with:
 
     pip install pytest pytest-cov pytest-datafiles
     python -m pytest --cov=namedtupled/ tests
-
 
 .. _namedtuples: https://docs.python.org/3/library/collections.html
 .. _hangtwenty: https://gist.github.com/hangtwenty/5960435
