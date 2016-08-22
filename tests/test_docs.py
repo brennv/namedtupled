@@ -49,7 +49,7 @@ def test_env():
     # export APIKEY="c4tnip!"
     variables = ['USERNAME', 'APIKEY']
     cat = namedtupled.env(variables)
-    assert cat.username == 'binks'
+    assert cat.USERNAME == 'binks'
 
 
 def test_ignore():

@@ -163,7 +163,7 @@ Then in python:
     variables = ['USERNAME', 'APIKEY']
     env = namedtupled.env(variables)
 
-    env.username  # 'binks'
+    env.USERNAME  # 'binks'
 
 ignore()
 ~~~~~~~~
