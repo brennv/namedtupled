@@ -19,7 +19,7 @@ setup(
   author_email = 'brennan@beta.build',
   license='MIT',
   url = 'https://github.com/brennv/namedtupled',
-  # download_url = 'https://github.com/brennv/namedtupled/tarball/0.1',
+  download_url = 'https://github.com/brennv/namedtupled/archive/0.1.tar.gz',
   keywords = 'namedtupled namedtuple json yaml',
   install_requires=[
     'future',
