@@ -7,8 +7,15 @@ keys = ['foo', 'baz', 'tito', 'alist']
 values = [
     'bar',
     {'qux': 'quux'},
-    {'tata': 'tutu', 'totoro': 'tots', 'frobnicator': ['this', 'is', 'not', 'a', 'mapping']},
-    [{'one': '1', 'a': 'A'}, {'two': '2', 'b': 'B'}]
+    {
+        'tata': 'tutu',
+        'totoro': 'tots',
+        'frobnicator': ['this', 'is', 'not', 'a', 'mapping']
+    },
+    [
+        {'one': '1', 'a': 'A'},
+        {'two': '2', 'b': 'B'}
+    ]
 ]
 
 

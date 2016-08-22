@@ -3,7 +3,8 @@ import pytest
 import os
 
 
-FIXTURE_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data',)
+FIXTURE_DIR = os.path.join(os.path.dirname(
+    os.path.realpath(__file__)), 'data',)
 
 json_object = """
     {
