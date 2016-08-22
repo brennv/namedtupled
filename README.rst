@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/brennv/namedtupled.svg?branch=master
+    :target: https://travis-ci.org/brennv/namedtupled
+.. image:: https://img.shields.io/badge/python-2.7%2C3.5-blue.svg
+
 namedtupled
 ===========
 
