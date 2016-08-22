@@ -63,7 +63,7 @@ From dict:
     data = {'binks': {'says': 'meow'}}
     cat = namedtupled.map(data)
 
-    cat.bink.says  # 'meow'
+    cat.binks.says  # 'meow'
 
 From list:
 
