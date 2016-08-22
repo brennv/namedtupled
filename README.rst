@@ -32,11 +32,12 @@ Usage
 Create namedtuples with methods: `map`_, `json`_, `yaml`_, `zip`_,
 `env`_ and helper method `ignore`_.
 
-Optionally name a namedtuple by passing a ‘name’ argument to any method,
+Optionally name namedtuples by passing a ‘name’ argument to any method,
 the default name is simply ‘NT’.
 
 .. code:: python
 
+    data = {'binks': {'says': 'meow'}}
     cat = namedtupled.map(data, name='Cat')
 
     cat  # Cat(binks=NT(says='meow'))

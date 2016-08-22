@@ -1,11 +1,15 @@
 from setuptools import setup
 
+readme = open('README.rst', 'r')
+README_TEXT = readme.read()
+readme.close()
+
 setup(
   name = 'namedtupled',
   packages = ['namedtupled'],
   version = '0.1',
   description = 'Lightweight wrapper for creating namedtuples from nested dicts, lists, json and yaml.',
-  long_description=readme(),
+  long_description=README_TEXT,
   classifiers=[
     'Development Status :: 3 - Alpha',
     'License :: OSI Approved :: MIT License',
