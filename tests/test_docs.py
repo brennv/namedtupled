@@ -44,12 +44,12 @@ def test_yaml():
     assert cat.binks.says == 'meow'
 
 
-# def test_env():
+def test_env():
     # export USERNAME="binks"
-    #export APIKEY="c4tnip!"
-    # vars = ['USERNAME', 'APIKEY']
-    # cat = namedtupled.env(vars)
-    # assert cat.username == 'binks'
+    # export APIKEY="c4tnip!"
+    variables = ['USERNAME', 'APIKEY']
+    cat = namedtupled.env(variables)
+    assert cat.username == 'binks'
 
 
 def test_ignore():

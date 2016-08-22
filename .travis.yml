@@ -8,7 +8,10 @@ python:
   - "3.5-dev"
   - "nightly"
 
-before_install: pip install pytest pytest-cov pytest-datafiles
+before_install:
+  - pip install pytest pytest-cov pytest-datafiles
+  - export USERNAME="binks"
+  - export APIKEY="c4tnip!"
 install: pip install -r requirements.txt
 script: python -m pytest --cov=namedtupled/ tests
 after_success: bash <(curl -s https://codecov.io/bash)
