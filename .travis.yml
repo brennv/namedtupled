@@ -11,3 +11,4 @@ python:
 before_install: pip install pytest pytest-cov pytest-datafiles
 install: pip install -r requirements.txt
 script: python -m pytest --cov=namedtupled/ tests
+after_success: bash <(curl -s https://codecov.io/bash)
