@@ -2,6 +2,7 @@
 __pycache__/
 .cache/
 *.pyc
+/build/
 /dist/
 /*.egg-info
 .coverage
