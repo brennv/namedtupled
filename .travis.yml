@@ -10,7 +10,5 @@ python:
   - "nightly"
 
 before_install: pip install pytest pytest-cov pytest-datafiles
-
 install: pip install -r requirements.txt
-
 script: python -m pytest --cov=namedtupled/ tests
