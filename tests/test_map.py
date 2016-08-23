@@ -2,8 +2,7 @@ import namedtupled
 import pytest
 
 
-mapping = \
-{
+mapping = {
     'foo': 'bar',
     'baz': {'qux': 'quux'},
     'tito': {
@@ -13,8 +12,7 @@ mapping = \
     'alist': [{'one': '1', 'a': 'A'}, {'two': '2', 'b': 'B'}]
 }
 
-mapping_array = \
-[
+mapping_array = [
     {
         'foo': 'bar',
         'baz': {'qux': 'quux'},

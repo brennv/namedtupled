@@ -1,7 +1,8 @@
 from .mapper import mapper, namedtuple
 import yaml
 import json
-import os, getpass
+import os
+import getpass
 
 
 def load_lists(keys=[], values=[], name='NT'):
