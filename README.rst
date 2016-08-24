@@ -3,6 +3,9 @@
 .. image:: https://img.shields.io/badge/python-2.7%2C%203.4%2C%203.5-blue.svg
 .. image:: https://img.shields.io/codecov/c/github/brennv/namedtupled.svg
     :target: https://codecov.io/gh/brennv/namedtupled
+.. image:: https://badges.gitter.im/namedtupled/Lobby.svg
+    :alt: Join the chat at https://gitter.im/namedtupled/Lobby
+    :target: https://gitter.im/namedtupled/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 namedtupled
 ===========
