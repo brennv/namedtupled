@@ -199,3 +199,8 @@ PRs welcome, tests run with:
 .. _zip: #zip
 .. _env: #env
 .. _ignore: #ignore
+
+
+.. image:: https://badges.gitter.im/namedtupled/Lobby.svg
+   :alt: Join the chat at https://gitter.im/namedtupled/Lobby
+   :target: https://gitter.im/namedtupled/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
