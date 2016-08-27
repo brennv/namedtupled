@@ -10,13 +10,6 @@ brief_description = """
 
 `https://github.com/brennv/namedtupled`_
 
-namedtupled
-===========
-
-`namedtuples`_ are immutable, performant and classy. **namedtupled** is
-a lightweight wrapper for recursively creating namedtuples from nested
-dicts, lists, json and yaml. Thanks to `hangtwenty`_.
-
 Installation
 ============
 
