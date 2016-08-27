@@ -38,12 +38,9 @@ Getting started
 
     cat.binks.says  # 'meow'
 
-Docs: `https://github.com/brennv/namedtupled#readme`_
-
 .. _namedtuples: https://docs.python.org/3/library/collections.html
 .. _hangtwenty: https://gist.github.com/hangtwenty/5960435
 .. _https://github.com/brennv/namedtupled: https://github.com/brennv/namedtupled
-.. _https://github.com/brennv/namedtupled#readme: https://github.com/brennv/namedtupled#readme
 """
 
 
