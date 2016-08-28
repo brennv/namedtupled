@@ -181,6 +181,11 @@ Example usage:
 
     cat.binks  # {'says': 'meow'}
 
+Alternatives
+------------
+
+`bunch`_ and `munch`_
+
 Development
 -----------
 
@@ -199,3 +204,5 @@ PRs welcome, tests run with:
 .. _zip: #zip
 .. _env: #env
 .. _ignore: #ignore
+.. _bunch: https://github.com/dsc/bunch
+.. _munch: https://github.com/Infinidat/munch
