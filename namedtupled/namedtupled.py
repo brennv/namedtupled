@@ -3,7 +3,7 @@ standard_library.install_aliases()
 from collections import Mapping, namedtuple, UserDict
 
 
-def mapper(mapping, name='NT'):
+def mapper(mapping, name='NT'):  # thank you https://gist.github.com/hangtwenty/5960435
     """ Convert mappings to namedtuples recursively. """
     if isinstance(mapping, Mapping) and not isinstance(mapping, AsDict):
         for key, value in list(mapping.items()):
