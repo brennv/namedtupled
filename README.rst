@@ -199,8 +199,7 @@ Example usage:
 Alternatives
 ------------
 
-`bunch`_
-`munch`_
+`bunch`_ and `munch`_
 
 Development
 -----------
