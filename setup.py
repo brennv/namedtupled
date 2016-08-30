@@ -44,7 +44,7 @@ Getting started
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.1.4',
+    version='0.2.0',
     description='Lightweight wrapper for creating namedtuples.',
     # from nested dicts, lists, json and yaml
     long_description=brief_description,
@@ -66,7 +66,7 @@ setup(
     author_email='brennan@beta.build',
     license='MIT',
     url='https://github.com/brennv/namedtupled',
-    download_url='https://github.com/brennv/namedtupled/tarball/0.1.4',
+    download_url='https://github.com/brennv/namedtupled/tarball/0.2.0',
     keywords='namedtupled namedtuple json yaml',
     install_requires=[
         'future',

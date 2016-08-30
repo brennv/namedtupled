@@ -36,7 +36,7 @@ Usage
 -----
 
 Create namedtuples with methods: `map`_, `json`_, `yaml`_, `zip`_,
-`env`_ and helper method `ignore`_.
+`env`_ and helper method `ignore`_. Unpack nested namedtuples with `reduce`_.
 
 Optionally name namedtuples by passing a ‘name’ argument to any method,
 the default name is simply ‘NT’.
@@ -73,6 +73,21 @@ From list:
     cats = namedtupled.map(data)
 
     cats[1].says  # 'prrr'
+
+reduce()
+~~~~~~~~
+
+Recursively convert nested namedtuples to mappings.
+
+*args: object*
+
+.. code:: python
+
+    cat  # NT(binks=NT(says='meow'))
+
+    data = namedtupled.reduce(cat)
+
+    data  # {'binks': {'says': 'meow'}}
 
 json()
 ~~~~~~
@@ -184,7 +199,8 @@ Example usage:
 Alternatives
 ------------
 
-`bunch`_ and `munch`_
+`bunch`_
+`munch`_
 
 Development
 -----------
@@ -199,6 +215,7 @@ PRs welcome, tests run with:
 .. _namedtuples: https://docs.python.org/3/library/collections.html
 .. _hangtwenty: https://gist.github.com/hangtwenty/5960435
 .. _map: #map
+.. _reduce: #reduce
 .. _json: #json
 .. _yaml: #yaml
 .. _zip: #zip

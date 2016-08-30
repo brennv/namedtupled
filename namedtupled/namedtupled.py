@@ -30,3 +30,14 @@ def ignore(mapping):
     elif isinstance(mapping, list):
         return [ignore(item) for item in mapping]
     return mapping
+
+
+def reducer(obj):
+    if isinstance(obj, dict):
+        return {key: reducer(value) for key, value in obj.items()}
+    elif isinstance(obj, list):
+        return [reducer(value) for value in obj]
+    elif isinstance(obj, tuple):
+        return {key: reducer(value) for key, value in obj._asdict().items()}
+    else:
+        return obj
