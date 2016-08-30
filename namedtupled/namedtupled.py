@@ -32,12 +32,25 @@ def ignore(mapping):
     return mapping
 
 
+def isnamedtupleinstance(x):  # thank you http://stackoverflow.com/a/2166841/6085135
+    _type = type(x)
+    bases = _type.__bases__
+    if len(bases) != 1 or bases[0] != tuple:
+        return False
+    fields = getattr(_type, '_fields', None)
+    if not isinstance(fields, tuple):
+        return False
+    return all(type(i)==str for i in fields)
+
+
 def reducer(obj):
     if isinstance(obj, dict):
         return {key: reducer(value) for key, value in obj.items()}
     elif isinstance(obj, list):
         return [reducer(value) for value in obj]
-    elif isinstance(obj, tuple):
+    elif isnamedtupleinstance(obj):
         return {key: reducer(value) for key, value in obj._asdict().items()}
+    elif isinstance(obj, tuple):
+        return tuple(reducer(value) for value in obj)
     else:
         return obj

@@ -79,7 +79,7 @@ reduce()
 
 Recursively convert nested namedtuples to mappings.
 
-*args: object*
+*args: obj*
 
 .. code:: python
 
