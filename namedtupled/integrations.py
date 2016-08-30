@@ -1,4 +1,4 @@
-from .mapper import mapper, namedtuple
+from .namedtupled import mapper, namedtuple
 import yaml
 import json
 import os

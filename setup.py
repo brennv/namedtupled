@@ -10,9 +10,6 @@ brief_description = """
 
 `https://github.com/brennv/namedtupled`_
 
-namedtupled
-===========
-
 `namedtuples`_ are immutable, performant and classy. **namedtupled** is
 a lightweight wrapper for recursively creating namedtuples from nested
 dicts, lists, json and yaml. Thanks to `hangtwenty`_.
@@ -47,7 +44,7 @@ Getting started
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.1.4',
+    version='0.2.0',
     description='Lightweight wrapper for creating namedtuples.',
     # from nested dicts, lists, json and yaml
     long_description=brief_description,
@@ -58,7 +55,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
@@ -69,8 +65,7 @@ setup(
     author_email='brennan@beta.build',
     license='MIT',
     url='https://github.com/brennv/namedtupled',
-    docs_url='https://github.com/brennv/namedtupled#readme',
-    download_url='https://github.com/brennv/namedtupled/tarball/0.1.4',
+    download_url='https://github.com/brennv/namedtupled/tarball/0.2.0',
     keywords='namedtupled namedtuple json yaml',
     install_requires=[
         'future',

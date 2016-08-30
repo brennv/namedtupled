@@ -19,6 +19,18 @@ def test_map():
     assert cats[1].says == 'prrr'
 
 
+def test_reducer():
+    data = {'binks': {'says': 'meow'}}
+    cat = namedtupled.map(data)
+    unpacked_cat = namedtupled.reduce(cat)
+    assert unpacked_cat == {'binks': {'says': 'meow'}}
+    data = [{'id': 'binks', 'says': 'meow'}, {'id': 'cedric', 'says': 'prrr'}]
+    cats = namedtupled.map(data)
+    unpacked_cats = namedtupled.reduce(cats)
+    assert unpacked_cats == [{'id': 'binks', 'says': 'meow'},
+                             {'id': 'cedric', 'says': 'prrr'}]
+
+
 def test_zip():
     keys, values = ['id', 'says'], ['binks', 'prrr']
     cat = namedtupled.zip(keys, values)
