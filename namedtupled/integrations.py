@@ -8,15 +8,15 @@ import getpass
 def load_lists(keys=[], values=[], name='NT'):
     """ Map namedtuples given a pair of key, value lists. """
     mapping = dict(zip(keys, values))
-    return mapper(mapping, name=name)
+    return mapper(mapping, _nt_name=name)
 
 
 def load_json(data=None, path=None, name='NT'):
     """ Map namedtuples with json data. """
     if data and not path:
-        return mapper(json.loads(data), name=name)
+        return mapper(json.loads(data), _nt_name=name)
     if path and not data:
-        return mapper(json.load(path), name=name)
+        return mapper(json.load(path), _nt_name=name)
     if data and path:
         raise ValueError('expected one source and received two')
 
@@ -24,11 +24,11 @@ def load_json(data=None, path=None, name='NT'):
 def load_yaml(data=None, path=None, name='NT'):
     """ Map namedtuples with yaml data. """
     if data and not path:
-        return mapper(yaml.load(data), name=name)
+        return mapper(yaml.load(data), _nt_name=name)
     if path and not data:
         with open(path, 'r') as f:
             data = yaml.load(f)
-        return mapper(data, name=name)
+        return mapper(data, _nt_name=name)
     if data and path:
         raise ValueError('expected one source and received two')
 
