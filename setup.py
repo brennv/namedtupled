@@ -44,12 +44,11 @@ Getting started
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.2.1',
+    version='0.3.0',
     description='Lightweight wrapper for creating namedtuples.',
-    # from nested dicts, lists, json and yaml
     long_description=brief_description,
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
@@ -65,7 +64,7 @@ setup(
     author_email='brennan@beta.build',
     license='MIT',
     url='https://github.com/brennv/namedtupled',
-    download_url='https://github.com/brennv/namedtupled/tarball/0.2.1',
+    download_url='https://github.com/brennv/namedtupled/tarball/0.3.0',
     keywords='namedtupled namedtuple json yaml',
     install_requires=[
         'future',
