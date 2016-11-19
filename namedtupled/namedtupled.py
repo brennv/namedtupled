@@ -3,19 +3,19 @@ standard_library.install_aliases()
 from collections import Mapping, namedtuple, UserDict
 
 
-def mapper(mapping, name='NT'):
+def mapper(mapping, _nt_name='NT'):
     """ Convert mappings to namedtuples recursively. """
     if isinstance(mapping, Mapping) and not isinstance(mapping, AsDict):
         for key, value in list(mapping.items()):
             mapping[key] = mapper(value)
-        return namedtuple_wrapper(name, **mapping)
+        return namedtuple_wrapper(_nt_name, **mapping)
     elif isinstance(mapping, list):
         return [mapper(item) for item in mapping]
     return mapping
 
 
-def namedtuple_wrapper(name, **kwargs):
-    wrap = namedtuple(name, kwargs)
+def namedtuple_wrapper(_nt_name, **kwargs):
+    wrap = namedtuple(_nt_name, kwargs)
     return wrap(**kwargs)
 
 

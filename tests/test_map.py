@@ -11,7 +11,8 @@ mapping = {
         'frobnicator': ['this', 'is', 'not', 'a', 'mapping']},
     'alist': [{'one': '1', 'a': 'A'}, {'two': '2', 'b': 'B'}],
     'huh': [('a', 'b', 'c')],
-    'huh2': ('a', 'b', ('a', 'b', 'c'))
+    'huh2': ('a', 'b', ('a', 'b', 'c')),
+    'name': 'Bob'
 }
 
 mapping_array = [mapping, mapping]
@@ -29,6 +30,7 @@ def test_namedtupled_map_object(mapping=mapping):
     assert t.alist[0] != {'one': '1', 'a': 'A'}
     assert t.huh == [('a', 'b', 'c')]
     assert t.huh2 == ('a', 'b', ('a', 'b', 'c'))
+    assert t.name == 'Bob'
 
 
 def test_namedtupled_map_array(mapping=mapping_array):
