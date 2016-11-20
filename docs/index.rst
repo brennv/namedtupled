@@ -1,36 +1,39 @@
-.. image:: https://travis-ci.org/brennv/namedtupled.svg?branch=master
-    :target: https://travis-ci.org/brennv/namedtupled
-.. image:: https://img.shields.io/badge/python-2.7%2C%203.4%2C%203.5-blue.svg
-.. image:: https://img.shields.io/codecov/c/github/brennv/namedtupled.svg
-    :target: https://codecov.io/gh/brennv/namedtupled
+.. namedtupled documentation master file, created by
+   sphinx-quickstart on Sat Nov 19 06:44:51 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
 namedtupled
 ===========
 
-`namedtuples`_ are immutable, performant and classy. **namedtupled** is
+`namedtuples`_ are immutable, performant and classy. `namedtupled`_ is
 a lightweight wrapper for recursively creating namedtuples from nested
 dicts, lists, json and yaml. Inspired by `hangtwenty`_.
+
+.. toctree::
+   :maxdepth: 2
+
 
 Installation
 ------------
 
 .. code:: bash
 
-    pip install namedtupled
+   pip install namedtupled
 
 Getting started
 ---------------
 
 .. code:: python
 
-    import namedtupled
+   import namedtupled
 
-    data = {'binks': {'says': 'meow'}}
-    cat = namedtupled.map(data)
+   data = {'binks': {'says': 'meow'}}
+   cat = namedtupled.map(data)
 
-    cat  # NT(binks=NT(says='meow'))
+   cat  # NT(binks=NT(says='meow'))
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 Usage
 -----
@@ -43,10 +46,10 @@ the default name is simply ‘NT’.
 
 .. code:: python
 
-    data = {'binks': {'says': 'meow'}}
-    cat = namedtupled.map(data, name='Cat')
+   data = {'binks': {'says': 'meow'}}
+   cat = namedtupled.map(data, name='Cat')
 
-    cat  # Cat(binks=NT(says='meow'))
+   cat  # Cat(binks=NT(says='meow'))
 
 map()
 ~~~~~
@@ -60,19 +63,19 @@ From dict:
 
 .. code:: python
 
-    data = {'binks': {'says': 'meow'}}
-    cat = namedtupled.map(data)
+   data = {'binks': {'says': 'meow'}}
+   cat = namedtupled.map(data)
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 From list:
 
 .. code:: python
 
-    data = [{'id': 'binks', 'says': 'meow'}, {'id': 'cedric', 'says': 'prrr'}]
-    cats = namedtupled.map(data)
+   data = [{'id': 'binks', 'says': 'meow'}, {'id': 'cedric', 'says': 'prrr'}]
+   cats = namedtupled.map(data)
 
-    cats[1].says  # 'prrr'
+   cats[1].says  # 'prrr'
 
 reduce()
 ~~~~~~~~
@@ -83,11 +86,11 @@ Recursively convert nested namedtuples to mappings.
 
 .. code:: python
 
-    cat  # NT(binks=NT(says='meow'))
+   cat  # NT(binks=NT(says='meow'))
 
-    data = namedtupled.reduce(cat)
+   data = namedtupled.reduce(cat)
 
-    data  # {'binks': {'says': 'meow'}}
+   data  # {'binks': {'says': 'meow'}}
 
 json()
 ~~~~~~
@@ -100,18 +103,18 @@ Inline:
 
 .. code:: python
 
-    data = """{"binks": {"says": "meow"}}"""
-    cat = namedtupled.json(data)
+   data = """{"binks": {"says": "meow"}}"""
+   cat = namedtupled.json(data)
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 Or specify path for a json file:
 
 .. code:: python
 
-    cat = namedtupled.json(path='cat.json')
+   cat = namedtupled.json(path='cat.json')
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 yaml()
 ~~~~~~
@@ -124,21 +127,21 @@ Inline:
 
 .. code:: python
 
-    data = """
-    binks:
-      says: meow
-    """
-    cat = namedtupled.yaml(data)
+   data = """
+   binks:
+     says: meow
+   """
+   cat = namedtupled.yaml(data)
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 Or specify path for a yaml file:
 
 .. code:: python
 
-    cat = namedtupled.yaml(path='cat.yaml')
+   cat = namedtupled.yaml(path='cat.yaml')
 
-    cat.binks.says  # 'meow'
+   cat.binks.says  # 'meow'
 
 zip()
 ~~~~~
@@ -151,10 +154,10 @@ Example:
 
 .. code:: python
 
-    keys, values = ['id', 'says'], ['binks', 'prrr']
-    cat = namedtupled.zip(keys, values)
+   keys, values = ['id', 'says'], ['binks', 'prrr']
+   cat = namedtupled.zip(keys, values)
 
-    cat.says  # 'prrr'
+   cat.says  # 'prrr'
 
 env()
 ~~~~~
@@ -168,17 +171,17 @@ In shell:
 
 .. code:: bash
 
-    export USERNAME="binks"
-    export APIKEY="c4tnip!"
+   export USERNAME="binks"
+   export APIKEY="c4tnip!"
 
 Then in python:
 
 .. code:: python
 
-    variables = ['USERNAME', 'APIKEY']
-    env = namedtupled.env(variables)
+   variables = ['USERNAME', 'APIKEY']
+   env = namedtupled.env(variables)
 
-    env.USERNAME  # 'binks'
+   env.USERNAME  # 'binks'
 
 ignore()
 ~~~~~~~~
@@ -191,10 +194,10 @@ Example usage:
 
 .. code:: python
 
-    data = {'binks': namedtupled.ignore({'says': 'meow'})}
-    cat = namedtupled.map(data)
+   data = {'binks': namedtupled.ignore({'says': 'meow'})}
+   cat = namedtupled.map(data)
 
-    cat.binks  # {'says': 'meow'}
+   cat.binks  # {'says': 'meow'}
 
 Alternatives
 ------------
@@ -204,14 +207,18 @@ Alternatives
 Development
 -----------
 
-Issues and PRs welcome, tests run with:
+Source on `github`_. Issues and PRs welcome, tests run with:
 
 .. code:: bash
 
-    pip install pytest pytest-cov pytest-datafiles
-    python -m pytest --cov=namedtupled/ tests
+   pip install pytest pytest-cov pytest-datafiles
+   python -m pytest --cov=namedtupled/ tests
+
+Edit the docs `here`_.
+
 
 .. _namedtuples: https://docs.python.org/3/library/collections.html
+.. _namedtupled: https://github.com/brennv/namedtupled
 .. _hangtwenty: https://gist.github.com/hangtwenty/5960435
 .. _map: #map
 .. _reduce: #reduce
@@ -222,3 +229,5 @@ Issues and PRs welcome, tests run with:
 .. _ignore: #ignore
 .. _bunch: https://github.com/dsc/bunch
 .. _munch: https://github.com/Infinidat/munch
+.. _github: https://github.com/brennv/namedtupled
+.. _here: https://github.com/brennv/namedtupled/edit/develop/docs/index.rst
