@@ -10,7 +10,7 @@ brief_description = """
 
 Source: `https://github.com/brennv/namedtupled`_
 
-Docs: `http://namedtupled.readthedocs.io/en/latest/`_
+Docs: `https://namedtupled.readthedocs.io`_
 
 `namedtuples`_ are immutable, performant and classy. **namedtupled** is
 a lightweight wrapper for recursively creating namedtuples from nested
@@ -40,15 +40,15 @@ Getting started
 .. _namedtuples: https://docs.python.org/3/library/collections.html
 .. _hangtwenty: https://gist.github.com/hangtwenty/5960435
 .. _https://github.com/brennv/namedtupled: https://github.com/brennv/namedtupled
-.. _http://namedtupled.readthedocs.io/en/latest/: http://namedtupled.readthedocs.io/en/latest/
+.. _https://namedtupled.readthedocs.io: https://namedtupled.readthedocs.io
 """
 
 
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.3.2',
-    description='Lightweight wrapper for creating namedtuples.',
+    version='0.3.3',
+    description='Lightweight namedtuple wrapper for attribute-style data access (a la JavaScript objects).',
     long_description=brief_description,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -67,8 +67,8 @@ setup(
     author_email='brennan@beta.build',
     license='MIT',
     url='https://github.com/brennv/namedtupled',
-    download_url='https://github.com/brennv/namedtupled/tarball/0.3.2',
-    keywords='namedtupled namedtuple json yaml',
+    download_url='https://github.com/brennv/namedtupled/tarball/0.3.3',
+    keywords='namedtupled namedtuple json yaml attribute style data access javascript objects',
     install_requires=[
         'future',
         'pyyaml',
