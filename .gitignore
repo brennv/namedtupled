@@ -9,3 +9,4 @@ __pycache__/
 .coverage
 **/*gist*
 *gist*.*
+docs/_build/
