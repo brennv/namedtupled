@@ -54,8 +54,7 @@ the default name is simply ‘NT’.
 map()
 ~~~~~
 
-Recursively convert mappings like nested dicts, or lists of dicts, into
-to namedtuples.
+Recursively convert mappings like nested dicts, or lists of dicts, into namedtuples.
 
 *args: mapping, name=‘NT’*
 
