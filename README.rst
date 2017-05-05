@@ -1,8 +1,11 @@
 .. image:: https://travis-ci.org/brennv/namedtupled.svg?branch=master
     :target: https://travis-ci.org/brennv/namedtupled
-.. image:: https://img.shields.io/badge/python-2.7%2C%203.4%2C%203.5-blue.svg
+.. image:: https://img.shields.io/badge/python-2.7%2C%203.4%2C%203.5%2C%203.6-blue.svg
 .. image:: https://img.shields.io/codecov/c/github/brennv/namedtupled.svg
     :target: https://codecov.io/gh/brennv/namedtupled
+.. image:: https://readthedocs.org/projects/namedtupled/badge/?version=latest
+    :target: http://namedtupled.readthedocs.io/en/latest/?badge=latest
+
 
 namedtupled
 ===========
@@ -51,8 +54,7 @@ the default name is simply ‘NT’.
 map()
 ~~~~~
 
-Recursively convert mappings like nested dicts, or lists of dicts, into
-to namedtuples.
+Recursively convert mappings like nested dicts, or lists of dicts, into namedtuples.
 
 *args: mapping, name=‘NT’*
 
