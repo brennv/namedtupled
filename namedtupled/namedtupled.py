@@ -1,7 +1,10 @@
+import keyword
+import builtins
 from future import standard_library
 standard_library.install_aliases()
 from collections import Mapping, namedtuple, UserDict
 
+RESERVED = keyword.kwlist + dir(builtins)
 
 def mapper(mapping, _nt_name='NT'):
     """ Convert mappings to namedtuples recursively. """
@@ -15,6 +18,15 @@ def mapper(mapping, _nt_name='NT'):
 
 
 def namedtuple_wrapper(_nt_name, **kwargs):
+    for k in kwargs:
+        if k in RESERVED:
+            new_k = k + '_'
+            val = kwargs.pop(k)
+            if new_k in kwargs:
+                msg = "Can't rename the field {} to {}. {} already exist"
+                raise ValueError(msg.format(k, new_k, new_k))
+            kwargs.update({new_k: val})
+
     wrap = namedtuple(_nt_name, kwargs)
     return wrap(**kwargs)
 
