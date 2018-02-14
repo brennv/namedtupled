@@ -17,6 +17,17 @@ mapping = {
 
 mapping_array = [mapping, mapping]
 
+mapping_keywords = {
+    'baz': 'bar',
+    'from': 'John Doe'
+}
+
+mapping_keywords_dup = {
+    'baz': 'bar',
+    'from': 'John Doe',
+    'from_': 'Acme Corp'
+}
+
 
 def test_namedtupled_map_object(mapping=mapping):
     t = namedtupled.map(mapping)
@@ -43,3 +54,20 @@ def test_namedtupled_map_array(mapping=mapping_array):
     assert t[0].alist[1].two == '2'
     assert t[0].baz != {'qux': 'quux'}
     assert t[0].alist[0] != {'one': '1', 'a': 'A'}
+
+
+def test_namedtupled_map_object_keywords(mapping=mapping_keywords):
+    try:
+        t = namedtupled.map(mapping)
+    except ValueError:
+        # Type names and field names cannot be a keyword: 'from'
+        assert False
+
+    assert t.from_ == 'John Doe'
+    assert len(t._fields) == len(mapping)
+
+def test_namedtupled_map_object_keywords_dup(mapping=mapping_keywords_dup):
+    try:
+        t = namedtupled.map(mapping)
+    except ValueError:
+        assert True
