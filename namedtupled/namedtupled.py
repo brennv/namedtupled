@@ -18,7 +18,7 @@ class VersionCheck:
                 return -1
         return 0
 ob1 = VersionCheck()
-print(ob1.compareVersion(platform.python_version(),"3.9.0"))
+
 
 if (ob1.compareVersion(platform.python_version(),"3.10.0")) >= 0:
 	from collections.abc import Mapping
