@@ -1,8 +1,31 @@
+
+from collections import namedtuple, UserDict
+import platform
 from future import standard_library
 standard_library.install_aliases()
-from collections import Mapping, namedtuple, UserDict
 
 
+class VersionCheck:
+    def compareVersion(self, version1, version2):
+        versions1 = [int(v) for v in version1.split(".")]
+        versions2 = [int(v) for v in version2.split(".")]
+        for i in range(max(len(versions1),len(versions2))):
+            v1 = versions1[i] if i < len(versions1) else 0
+            v2 = versions2[i] if i < len(versions2) else 0
+            if v1 > v2:
+                return 1
+            elif v1 < v2:
+                return -1
+        return 0
+ob1 = VersionCheck()
+
+
+if (ob1.compareVersion(platform.python_version(),"3.10.0")) >= 0:
+	from collections.abc import Mapping
+elif (ob1.compareVersion(platform.python_version(),"3.10.0")) == -1:
+	from collections import Mapping
+    
+    
 def mapper(mapping, _nt_name='NT'):
     """ Convert mappings to namedtuples recursively. """
     if isinstance(mapping, Mapping) and not isinstance(mapping, AsDict):
