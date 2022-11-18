@@ -24,10 +24,10 @@ def load_json(data=None, path=None, name='NT'):
 def load_yaml(data=None, path=None, name='NT'):
     """ Map namedtuples with yaml data. """
     if data and not path:
-        return mapper(yaml.load(data), _nt_name=name)
+        return mapper(yaml.full_load(data), _nt_name=name)
     if path and not data:
         with open(path, 'r') as f:
-            data = yaml.load(f)
+            data = yaml.full_load(f)
         return mapper(data, _nt_name=name)
     if data and path:
         raise ValueError('expected one source and received two')

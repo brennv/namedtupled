@@ -47,7 +47,7 @@ Getting started
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.3.3',
+    version='0.3.4',
     description='Lightweight namedtuple wrapper for attribute-style data access (a la JavaScript objects).',
     long_description=brief_description,
     classifiers=[
@@ -62,6 +62,9 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
     author='brennv',
     author_email='brennan@beta.build',
