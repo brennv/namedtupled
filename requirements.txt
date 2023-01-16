@@ -1,2 +1,2 @@
-future==0.15.2
-PyYAML==3.11
+future==0.18.2
+PyYAML==6.0

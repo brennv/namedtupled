@@ -1,6 +1,7 @@
 from future import standard_library
 standard_library.install_aliases()
-from collections import Mapping, namedtuple, UserDict
+from collections import namedtuple, UserDict
+from collections.abc import Mapping
 
 
 def mapper(mapping, _nt_name='NT'):

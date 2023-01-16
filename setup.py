@@ -47,7 +47,7 @@ Getting started
 setup(
     name='namedtupled',
     packages=['namedtupled'],
-    version='0.3.3',
+    version='0.3.4',
     description='Lightweight namedtuple wrapper for attribute-style data access (a la JavaScript objects).',
     long_description=brief_description,
     classifiers=[
@@ -62,6 +62,9 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
     author='brennv',
     author_email='brennan@beta.build',
@@ -70,8 +73,8 @@ setup(
     download_url='https://github.com/brennv/namedtupled/tarball/0.3.3',
     keywords='namedtupled namedtuple json yaml attribute style data access javascript objects',
     install_requires=[
-        'future',
-        'pyyaml',
+        'future==0.18.2',
+        'pyyaml==6.0',
     ],
     include_package_data=True,
     zip_safe=False)
