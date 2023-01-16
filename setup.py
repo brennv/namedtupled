@@ -73,8 +73,8 @@ setup(
     download_url='https://github.com/brennv/namedtupled/tarball/0.3.3',
     keywords='namedtupled namedtuple json yaml attribute style data access javascript objects',
     install_requires=[
-        'future',
-        'pyyaml',
+        'future==0.18.2',
+        'pyyaml==6.0',
     ],
     include_package_data=True,
     zip_safe=False)
